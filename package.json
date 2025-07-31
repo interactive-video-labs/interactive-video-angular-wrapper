@@ -1,0 +1,59 @@
+{
+  "name": "@interactive-video-labs/angular",
+  "version": "0.0.1",
+  "description": "Thin Angular wrapper for the @interactive-video-labs/core engine. Enables cue-based interactive video playback in Angular applications.",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.ts --watch --format esm,cjs",
+    "test": "vitest run",
+    "clean": "rm -rf dist",
+    "prepare": "pnpm build"
+  },
+  "keywords": [
+    "interactive-video",
+    "angular",
+    "angular-component",
+    "typescript",
+    "video-player",
+    "cue-points",
+    "interactive-learning",
+    "angular-wrapper"
+  ],
+  "author": "Taj",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/interactive-video-labs/interactive-video-angular-wrapper.git"
+  },
+  "homepage": "https://github.com/interactive-video-labs/interactive-video-angular-wrapper#readme",
+  "bugs": {
+    "url": "https://github.com/interactive-video-labs/interactive-video-angular-wrapper/issues"
+  },
+  "packageManager": "pnpm@10.13.1",
+  "peerDependencies": {
+    "@angular/core": "^15.0.0 || ^16.0.0 || ^17.0.0",
+    "@angular/common": "^15.0.0 || ^16.0.0 || ^17.0.0",
+    "@interactive-video-labs/core": "^0.1.2"
+  },
+  "dependencies": {
+    "tslib": "^2.6.2"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.4.5",
+    "vitest": "^3.2.4"
+  }
+}
