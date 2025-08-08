@@ -81,6 +81,9 @@ export class InteractiveVideoComponent implements AfterViewInit, OnDestroy, OnCh
 
   ngOnChanges(changes: SimpleChanges): void {
     if (this.player) {
+      if (changes['videoUrl'] && changes['videoUrl'].currentValue) {
+        this.player.setSource(changes['videoUrl'].currentValue);
+      }
       if (changes['cues'] && changes['cues'].currentValue) {
         this.player.loadCues(changes['cues'].currentValue);
       }
@@ -89,6 +92,12 @@ export class InteractiveVideoComponent implements AfterViewInit, OnDestroy, OnCh
       }
       if (changes['locale'] && changes['locale'].currentValue) {
         this.player.setLocale(changes['locale'].currentValue);
+      }
+      if (changes['autoplay'] && changes['autoplay'].currentValue != null) {
+        this.player.setAutoplay(changes['autoplay'].currentValue);
+      }
+      if (changes['loop'] && changes['loop'].currentValue != null) {
+        this.player.setLoop(changes['loop'].currentValue);
       }
     }
   }
