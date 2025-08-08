@@ -81,23 +81,25 @@ export class InteractiveVideoComponent implements AfterViewInit, OnDestroy, OnCh
 
   ngOnChanges(changes: SimpleChanges): void {
     if (this.player) {
-      if (changes['videoUrl'] && changes['videoUrl'].currentValue) {
-        this.player.setSource(changes['videoUrl'].currentValue);
-      }
-      if (changes['cues'] && changes['cues'].currentValue) {
-        this.player.loadCues(changes['cues'].currentValue);
-      }
-      if (changes['translations'] && changes['translations'].currentValue) {
-        this.player.loadTranslations(this.locale, changes['translations'].currentValue);
-      }
-      if (changes['locale'] && changes['locale'].currentValue) {
-        this.player.setLocale(changes['locale'].currentValue);
-      }
-      if (changes['autoplay'] && changes['autoplay'].currentValue != null) {
-        this.player.setAutoplay(changes['autoplay'].currentValue);
-      }
-      if (changes['loop'] && changes['loop'].currentValue != null) {
-        this.player.setLoop(changes['loop'].currentValue);
+      const shouldReinitialize =
+        (changes['videoUrl'] && changes['videoUrl'].currentValue) ||
+        (changes['autoplay'] && changes['autoplay'].currentValue != null) ||
+        (changes['loop'] && changes['loop'].currentValue != null);
+
+      if (shouldReinitialize) {
+        this.player.destroy();
+        this.player = null;
+        this.initializePlayer();
+      } else {
+        if (changes['cues'] && changes['cues'].currentValue) {
+          this.player.loadCues(changes['cues'].currentValue);
+        }
+        if (changes['translations'] && changes['translations'].currentValue) {
+          this.player.loadTranslations(this.locale, changes['translations'].currentValue);
+        }
+        if (changes['locale'] && changes['locale'].currentValue) {
+          this.player.setLocale(changes['locale'].currentValue);
+        }
       }
     }
   }
