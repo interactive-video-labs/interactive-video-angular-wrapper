@@ -1,22 +1,41 @@
 # @interactive-video-labs/angular
 
-Thin Angular wrapper for the `@interactive-video-labs/core` engine. Enables cue-based interactive video playback in Angular applications.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/interactive-video-labs/docs/main/logo.svg" width="200px" alt="Interactive Video Labs Logo" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/npm/v/@interactive-video-labs/angular" alt="NPM Version" />
+  <img src="https://img.shields.io/npm/l/@interactive-video-labs/angular" alt="NPM License" />
+  <img src="https://img.shields.io/npm/d18m/@interactive-video-labs/angular?style=flat-square" alt="NPM Downloads" />
+  <a href="https://github.com/interactive-video-labs/interactive-video-angular-wrapper/actions">
+    <img src="https://github.com/interactive-video-labs/interactive-video-angular-wrapper/actions/workflows/release.yml/badge.svg" alt="Build Status" />
+  </a>
+</p>
+
+Welcome to `@interactive-video-labs/angular` — a lightweight Angular wrapper around the `@interactive-video-labs/core` engine for cue-driven interactive video experiences.
+
+This wrapper enables seamless integration of interactive video players into Angular applications using idiomatic Angular components and bindings, while staying close to the underlying core engine API.
+
+---
 
 ## Table of Contents
 
-- [Installation](#installation)
-- [Usage](#usage)
-  - [Basic Usage](#basic-usage)
-  - [With Cue Points](#with-cue-points)
-  - [With Translations](#with-translations)
-  - [With Analytics Events](#with-analytics-events)
-  - [Mounting to an External Element](#mounting-to-an-external-element)
-- [API Reference](#api-reference)
-  - [Inputs](#inputs)
-  - [Outputs](#outputs)
-- [Development](#development)
-- [Contributing](#contributing)
-- [License](#license)
+- [@interactive-video-labs/angular](#interactive-video-labsangular)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [Basic Usage](#basic-usage)
+    - [With Cue Points](#with-cue-points)
+    - [With Translations](#with-translations)
+    - [With Analytics Events](#with-analytics-events)
+    - [Mounting to an External Element](#mounting-to-an-external-element)
+  - [API Reference](#api-reference)
+    - [Inputs](#inputs)
+    - [Outputs](#outputs)
+  - [Development](#development)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 ## Installation
 
@@ -177,4 +196,6 @@ We welcome contributions to `@interactive-video-labs/angular`! Please see our [C
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE).engine API.
+
+---
