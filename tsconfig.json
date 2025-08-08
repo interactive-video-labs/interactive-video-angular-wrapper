@@ -9,7 +9,8 @@
     "declaration": true,
     "outDir": "./dist",
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
+    "emitDecoratorMetadata": false,
+    "useDefineForClassFields": false,
     "lib": ["ES2020", "DOM"]
   },
   "include": ["src/**/*.ts"],
