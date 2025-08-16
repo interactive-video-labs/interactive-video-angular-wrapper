@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Import CommonModule for NgIf
 import { InteractiveVideoComponent } from '@interactive-video-labs/angular';
 
