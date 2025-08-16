@@ -1,11 +1,11 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Import CommonModule for NgIf
+import { InteractiveVideoModule } from '@interactive-video-labs/angular';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule], // Use CommonModule for NgIf
-  schemas: [CUSTOM_ELEMENTS_SCHEMA], // Allow Web Components
+  imports: [CommonModule, InteractiveVideoModule], // Import the Angular wrapper module
   template: `
     <h1>Simple Interactive Video Example</h1>
     <iv-interactive-video
