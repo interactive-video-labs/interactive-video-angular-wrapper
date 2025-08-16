@@ -183,9 +183,9 @@ export class InteractiveVideoModule {}
 // For backwards compatibility and to expose the component directly
 export {
   IVLabsPlayer,
-  PlayerConfig,
-  CuePoint,
-  Translations,
+  type PlayerConfig,
+  type CuePoint,
+  type Translations,
   type AnalyticsEvent,
   type AnalyticsPayload,
 } from '@interactive-video-labs/core';
