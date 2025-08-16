@@ -14,8 +14,12 @@ export default defineConfig((options) => ({
     clean: true,
     banner: {
         js: `/**
+ *
+ * ${pkg.description}
  * ${pkg.name} v${pkg.version}
- * Author: ${pkg.author}
+ * @author ${pkg.author}
+ * @license ${pkg.license}
+ * 
  */
     `,
     },

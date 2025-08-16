@@ -13,7 +13,7 @@ import {
   NgModule,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IVLabsPlayer, PlayerConfig, CuePoint, Translations, AnalyticsEvent, AnalyticsPayload } from '@interactive-video-labs/core';
+import { IVLabsPlayer, type PlayerConfig, type CuePoint, type Translations, type AnalyticsEvent, type AnalyticsPayload } from '@interactive-video-labs/core';
 
 /**
  * A standalone Angular component that wraps the IVLabsPlayer to provide interactive video capabilities.
@@ -21,11 +21,11 @@ import { IVLabsPlayer, PlayerConfig, CuePoint, Translations, AnalyticsEvent, Ana
  */
 @Component({
   selector: 'iv-interactive-video',
+  standalone: true,
   template: `
     <div *ngIf="!targetElementId" #playerContainer [id]="playerTargetId" style="width: 100%; height: auto;" data-testid="interactive-video-container"></div>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
 })
 export class InteractiveVideoComponent implements AfterViewInit, OnDestroy, OnChanges {
   /**
@@ -178,14 +178,17 @@ export class InteractiveVideoComponent implements AfterViewInit, OnDestroy, OnCh
   imports: [CommonModule, InteractiveVideoComponent],
   exports: [InteractiveVideoComponent],
 })
-export class InteractiveVideoModule {}
+export class InteractiveVideoModule {
+  // Module for the InteractiveVideoComponent for non-standalone usage.
+  constructor() {}
+}
 
 // For backwards compatibility and to expose the component directly
 export {
   IVLabsPlayer,
-  PlayerConfig,
-  CuePoint,
-  Translations,
-  AnalyticsEvent,
-  AnalyticsPayload,
+  type PlayerConfig,
+  type CuePoint,
+  type Translations,
+  type AnalyticsEvent,
+  type AnalyticsPayload,
 } from '@interactive-video-labs/core';
