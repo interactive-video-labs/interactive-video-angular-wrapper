@@ -8,13 +8,13 @@ This example demonstrates how to use the `interactive-video-angular-wrapper` in 
 1.  Install the dependencies:
 
     ```bash
-    npm install
+    pnpm install
     ```
 
 2.  Run the application:
 
     ```bash
-    npm start
+    pnpm start
     ```
 
 3.  Open your browser to `http://localhost:4200`.

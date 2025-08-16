@@ -1,12 +1,14 @@
-
 import { Component } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  schemas: [CUSTOM_ELEMENTS_SCHEMA], // Allow Web Components
   template: `
     <h1>Simple Interactive Video Example</h1>
     <iv-interactive-video
-      [videoUrl]="'https://storage.googleapis.com/interactive-video-labs-public/demo-assets/a-z/video.mp4'"
+      [videoUrl]="'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'"
       [cues]="[
         {
           id: 'cue-1',
