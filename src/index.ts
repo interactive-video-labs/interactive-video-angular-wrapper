@@ -25,7 +25,6 @@ import { IVLabsPlayer, PlayerConfig, CuePoint, Translations, type AnalyticsEvent
     <div *ngIf="!targetElementId" #playerContainer [id]="playerTargetId" style="width: 100%; height: auto;" data-testid="interactive-video-container"></div>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
 })
 export class InteractiveVideoComponent implements AfterViewInit, OnDestroy, OnChanges {
   /**
@@ -175,7 +174,8 @@ export class InteractiveVideoComponent implements AfterViewInit, OnDestroy, OnCh
  * A module for the InteractiveVideoComponent for non-standalone usage.
  */
 @NgModule({
-  imports: [CommonModule, InteractiveVideoComponent],
+  declarations: [InteractiveVideoComponent],
+  imports: [CommonModule],
   exports: [InteractiveVideoComponent],
 })
 export class InteractiveVideoModule {}

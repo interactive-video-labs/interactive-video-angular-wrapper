@@ -20,7 +20,7 @@
     "build": "tsup src/index.ts --format esm,cjs --dts",
     "dev": "tsup src/index.ts --watch --format esm,cjs",
     "test": "vitest run",
-    "clean": "rm -rf dist",
+    "clean": "rimraf dist",
     "prepare": "pnpm build"
   },
   "keywords": [
@@ -30,8 +30,7 @@
     "typescript",
     "video-player",
     "cue-points",
-    "interactive-learning",
-    "angular-wrapper"
+    ""
   ],
   "author": "Taj",
   "license": "MIT",
@@ -45,8 +44,8 @@
   },
   "packageManager": "pnpm@10.13.1",
   "peerDependencies": {
-    "@angular/common": "^15.0.0 || ^16.0.0 || ^17.0.0",
-    "@angular/core": "^15.0.0 || ^16.0.0 || ^17.0.0",
+    "@angular/common": "~19.0.0",
+    "@angular/core": "~19.0.0",
     "@interactive-video-labs/core": "^0.1.4"
   },
   "dependencies": {
@@ -54,17 +53,18 @@
   },
   "devDependencies": {
     "@analogjs/vite-plugin-angular": "^1.19.4",
-    "@angular-devkit/build-angular": "^20.1.6",
-    "@angular/common": "^20.1.7",
-    "@angular/compiler": "^20.1.7",
-    "@angular/compiler-cli": "^20.1.7",
-    "@angular/core": "^20.1.7",
-    "@angular/platform-browser": "^20.1.7",
-    "@angular/platform-browser-dynamic": "^20.1.7",
+    "@angular-devkit/build-angular": "~19.0.0",
+    "@angular/common": "~19.0.0",
+    "@angular/compiler": "~19.0.0",
+    "@angular/compiler-cli": "~19.0.0",
+    "@angular/core": "~19.0.0",
+    "@angular/platform-browser": "~19.0.0",
+    "@angular/platform-browser-dynamic": "~19.0.0",
     "jsdom": "^26.1.0",
     "tsup": "^8.5.0",
-    "typescript": "^5.9.2",
+    "typescript": "5.6.2",
     "vitest": "^3.2.4",
-    "zone.js": "^0.15.1"
+    "zone.js": "^0.15.1",
+    "rimraf": "^5.0.0"
   }
 }
