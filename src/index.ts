@@ -13,7 +13,7 @@ import {
   NgModule,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IVLabsPlayer, PlayerConfig, CuePoint, Translations, type AnalyticsEvent, type AnalyticsPayload } from '@interactive-video-labs/core';
+import { IVLabsPlayer, type PlayerConfig, type CuePoint, type Translations, type AnalyticsEvent, type AnalyticsPayload } from '@interactive-video-labs/core';
 
 /**
  * A standalone Angular component that wraps the IVLabsPlayer to provide interactive video capabilities.
