@@ -44,8 +44,8 @@
   },
   "packageManager": "pnpm@10.14.0",
   "peerDependencies": {
-    "@angular/common": "~19.0.0",
-    "@angular/core": "~19.0.0",
+    "@angular/common": "~19.0.0 || ~19.2.0",
+    "@angular/core": "~19.0.0 || ~19.2.0",
     "@interactive-video-labs/core": "^0.1.4"
   },
   "dependencies": {
