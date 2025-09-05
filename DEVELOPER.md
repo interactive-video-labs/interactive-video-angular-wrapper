@@ -20,16 +20,17 @@ This document provides detailed instructions for developers who want to set up, 
 
 Before you begin, ensure you have the following installed:
 
--   **Node.js**: Version 18 or higher. You can download it from [nodejs.org](https://nodejs.org/).
--   **pnpm**: Our preferred package manager. If you don't have it, install it globally:
-    ```bash
-    npm install -g pnpm
-    ```
-    Alternatively, you can use `npm` or `yarn`, but `pnpm` is recommended for consistent dependency management.
+- **Node.js**: Version 18 or higher. You can download it from [nodejs.org](https://nodejs.org/).
+- **pnpm**: Our preferred package manager. If you don't have it, install it globally:
+  ```bash
+  npm install -g pnpm
+  ```
+  Alternatively, you can use `npm` or `yarn`, but `pnpm` is recommended for consistent dependency management.
 
 ## Getting Started
 
 1.  **Clone the repository:**
+
     ```bash
     git clone https://github.com/interactive-video-labs/interactive-video-angular-wrapper.git
     cd interactive-video-angular-wrapper
@@ -43,14 +44,14 @@ Before you begin, ensure you have the following installed:
 
 ## Project Structure
 
--   `src/`: Contains the source code for the Angular wrapper component.
-    -   `index.ts`: The main entry point for the library, exporting `InteractiveVideoComponent` and related types.
--   `test/`: Contains unit tests for the components.
-    -   `interactive-video.test.ts`: Tests for the `InteractiveVideoComponent`.
--   `dist/`: (Generated after build) Contains the compiled output of the library (ESM, CJS, and declaration files).
--   `examples/`: Contains example usage of the Angular wrapper.
--   `tsup.config.ts`: Configuration for `tsup`, used to bundle the TypeScript library.
--   `vitest.config.ts`: Configuration for `Vitest`, our testing framework.
+- `src/`: Contains the source code for the Angular wrapper component.
+  - `index.ts`: The main entry point for the library, exporting `InteractiveVideoComponent` and related types.
+- `test/`: Contains unit tests for the components.
+  - `interactive-video.test.ts`: Tests for the `InteractiveVideoComponent`.
+- `dist/`: (Generated after build) Contains the compiled output of the library (ESM, CJS, and declaration files).
+- `examples/`: Contains example usage of the Angular wrapper.
+- `tsup.config.ts`: Configuration for `tsup`, used to bundle the TypeScript library.
+- `vitest.config.ts`: Configuration for `Vitest`, our testing framework.
 
 ## Development Scripts
 
@@ -102,7 +103,7 @@ Removes the `dist/` directory, effectively cleaning up all compiled output.
 
 ## Troubleshooting
 
--   **`pnpm install` fails**: Ensure you have Node.js and pnpm installed correctly. Check your internet connection.
--   **Build errors**: Verify that all dependencies are installed (`pnpm install`) and that your TypeScript code has no compilation errors.
--   **Tests failing**: Run `pnpm test` to see detailed error messages. Ensure your changes haven't introduced regressions.
--   **Peer dependency issues**: If you encounter issues related to `@angular/core` or `@angular/common`, ensure that the versions installed in your consuming application match the peer dependency ranges specified in `package.json` (`^15.0.0 || ^16.0.0 || ^17.0.0`).
+- **`pnpm install` fails**: Ensure you have Node.js and pnpm installed correctly. Check your internet connection.
+- **Build errors**: Verify that all dependencies are installed (`pnpm install`) and that your TypeScript code has no compilation errors.
+- **Tests failing**: Run `pnpm test` to see detailed error messages. Ensure your changes haven't introduced regressions.
+- **Peer dependency issues**: If you encounter issues related to `@angular/core` or `@angular/common`, ensure that the versions installed in your consuming application match the peer dependency ranges specified in `package.json` (`^15.0.0 || ^16.0.0 || ^17.0.0`).

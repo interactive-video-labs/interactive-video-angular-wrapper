@@ -13,7 +13,14 @@ import {
   NgModule,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IVLabsPlayer, type PlayerConfig, type CuePoint, type Translations, type AnalyticsEvent, type AnalyticsPayload } from '@interactive-video-labs/core';
+import {
+  IVLabsPlayer,
+  type PlayerConfig,
+  type CuePoint,
+  type Translations,
+  type AnalyticsEvent,
+  type AnalyticsPayload,
+} from '@interactive-video-labs/core';
 
 /**
  * A standalone Angular component that wraps the IVLabsPlayer to provide interactive video capabilities.
@@ -23,7 +30,13 @@ import { IVLabsPlayer, type PlayerConfig, type CuePoint, type Translations, type
   selector: 'iv-interactive-video',
   standalone: true,
   template: `
-    <div *ngIf="!targetElementId" #playerContainer [id]="playerTargetId" style="width: 100%; height: auto;" data-testid="interactive-video-container"></div>
+    <div
+      *ngIf="!targetElementId"
+      #playerContainer
+      [id]="playerTargetId"
+      style="width: 100%; height: auto;"
+      data-testid="interactive-video-container"
+    ></div>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
@@ -68,7 +81,9 @@ export class InteractiveVideoComponent implements AfterViewInit, OnDestroy, OnCh
    * Emits analytics events from the player.
    * The payload is a tuple containing the event name and the associated data.
    */
-  @Output() analyticsEvent = new EventEmitter<[event: AnalyticsEvent, payload?: AnalyticsPayload]>();
+  @Output() analyticsEvent = new EventEmitter<
+    [event: AnalyticsEvent, payload?: AnalyticsPayload]
+  >();
 
   @ViewChild('playerContainer') playerContainer?: ElementRef<HTMLDivElement>;
 
@@ -76,7 +91,8 @@ export class InteractiveVideoComponent implements AfterViewInit, OnDestroy, OnCh
   public playerTargetId: string;
 
   constructor() {
-    this.playerTargetId = this.targetElementId || `ivlabs-player-${Math.random().toString(36).substring(2, 9)}`;
+    this.playerTargetId =
+      this.targetElementId || `ivlabs-player-${Math.random().toString(36).substring(2, 9)}`;
   }
 
   ngOnChanges(changes: SimpleChanges): void {

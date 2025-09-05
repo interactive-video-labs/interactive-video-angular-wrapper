@@ -63,9 +63,7 @@ import { InteractiveVideoComponent } from '@interactive-video-labs/angular';
   selector: 'app-my-component',
   standalone: true,
   imports: [InteractiveVideoComponent],
-  template: `
-    <iv-interactive-video videoUrl="your-video-url.mp4"></iv-interactive-video>
-  `,
+  template: ` <iv-interactive-video videoUrl="your-video-url.mp4"></iv-interactive-video> `,
 })
 export class MyComponent {}
 ```
@@ -132,7 +130,11 @@ export class TranslationExampleComponent {
 
 ```typescript
 import { Component } from '@angular/core';
-import { InteractiveVideoComponent, AnalyticsEvent, AnalyticsPayload } from '@interactive-video-labs/angular';
+import {
+  InteractiveVideoComponent,
+  AnalyticsEvent,
+  AnalyticsPayload,
+} from '@interactive-video-labs/angular';
 
 @Component({
   selector: 'app-analytics-example',
@@ -170,21 +172,21 @@ You can mount the player to an existing HTML element by providing its ID to the 
 
 ### Inputs
 
-| Name            | Type                                     | Description                                                               | Default     | Required |
-| :-------------- | :--------------------------------------- | :------------------------------------------------------------------------ | :---------- | :------- |
-| `videoUrl`      | `string`                                 | The URL of the video to be loaded.                                        | `undefined` | Yes      |
-| `cues`          | `CuePoint[]`                             | An array of cue points for interactive events.                            | `undefined` | No       |
-| `translations`  | `Translations`                           | An object containing translations for the player.                         | `undefined` | No       |
-| `autoplay`      | `boolean`                                | Whether the video should start playing automatically.                     | `false`     | No       |
-| `loop`          | `boolean`                                | Whether the video should loop.                                            | `false`     | No       |
-| `locale`        | `string`                                 | The locale to be used for the player.                                     | `'en'`      | No       |
-| `targetElementId` | `string`                                 | The ID of an external HTML element where the player will be mounted.      | `undefined` | No       |
+| Name              | Type           | Description                                                          | Default     | Required |
+| :---------------- | :------------- | :------------------------------------------------------------------- | :---------- | :------- |
+| `videoUrl`        | `string`       | The URL of the video to be loaded.                                   | `undefined` | Yes      |
+| `cues`            | `CuePoint[]`   | An array of cue points for interactive events.                       | `undefined` | No       |
+| `translations`    | `Translations` | An object containing translations for the player.                    | `undefined` | No       |
+| `autoplay`        | `boolean`      | Whether the video should start playing automatically.                | `false`     | No       |
+| `loop`            | `boolean`      | Whether the video should loop.                                       | `false`     | No       |
+| `locale`          | `string`       | The locale to be used for the player.                                | `'en'`      | No       |
+| `targetElementId` | `string`       | The ID of an external HTML element where the player will be mounted. | `undefined` | No       |
 
 ### Outputs
 
-| Name             | Type                                                               | Description                                     |
-| :--------------- | :----------------------------------------------------------------- | :---------------------------------------------- |
-| `analyticsEvent` | `EventEmitter<[event: AnalyticsEvent, payload?: AnalyticsPayload]>` | Emits analytics events from the player.         |
+| Name             | Type                                                                | Description                             |
+| :--------------- | :------------------------------------------------------------------ | :-------------------------------------- |
+| `analyticsEvent` | `EventEmitter<[event: AnalyticsEvent, payload?: AnalyticsPayload]>` | Emits analytics events from the player. |
 
 ## Development
 

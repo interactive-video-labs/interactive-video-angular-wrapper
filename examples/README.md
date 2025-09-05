@@ -1,4 +1,3 @@
-
 # Simple Example
 
 This example demonstrates how to use the `interactive-video-angular-wrapper` in a simple Angular application.
