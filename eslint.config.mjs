@@ -17,16 +17,7 @@ const compat = new FlatCompat({
 
 export default defineConfig([
   {
-    ignores: [
-      'node_modules/*',
-      'dist/*',
-      'examples/*',
-      'scripts/*',
-      'dist/*',
-      'examples/*',
-      'scripts/*',
-      'test/*',
-    ],
+    ignores: ['node_modules/*', 'dist/*', 'examples/*', 'scripts/*', 'test/*'],
   },
   {
     extends: compat.extends(
