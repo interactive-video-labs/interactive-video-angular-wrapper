@@ -70,7 +70,7 @@
     "@angular/core": "~20.3.0",
     "@angular/platform-browser": "~20.3.0",
     "@angular/platform-browser-dynamic": "~20.3.0",
-    "jsdom": "^26.1.0",
+    "jsdom": "^27.0.0",
     "tsup": "^8.5.0",
     "typescript": "5.9.2",
     "vitest": "^3.2.4",
