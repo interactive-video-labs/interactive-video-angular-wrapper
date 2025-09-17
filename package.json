@@ -44,7 +44,7 @@
   "bugs": {
     "url": "https://github.com/interactive-video-labs/interactive-video-angular-wrapper/issues"
   },
-  "packageManager": "pnpm@10.16.1",
+  "packageManager": "pnpm@10.17.0",
   "peerDependencies": {
     "@angular/common": "~19.0.0 || ~19.2.0 || ~20.1.0 || ~20.2.0 || ~20.3.0",
     "@angular/core": "~19.0.0 || ~19.2.0 || ~20.1.0 || ~20.2.0 || ~20.3.0",
