@@ -72,7 +72,7 @@
     "@angular/platform-browser-dynamic": "~20.3.0",
     "jsdom": "^27.0.0",
     "tsup": "^8.5.0",
-    "typescript": "5.9.2",
+    "typescript": "5.9.3",
     "vitest": "^3.2.4",
     "zone.js": "^0.15.1",
     "rimraf": "^6.0.0"
