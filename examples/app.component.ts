@@ -10,9 +10,7 @@ import { InteractiveVideoComponent } from '@interactive-video-labs/angular';
   template: `
     <h1>Simple Interactive Video Example</h1>
     <iv-interactive-video
-      [videoUrl]="
-        'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
-      "
+      [videoUrl]="'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'"
       [cues]="[
         {
           id: 'cue-1',
